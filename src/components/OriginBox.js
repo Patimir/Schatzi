@@ -1,11 +1,11 @@
 import TextField from '@mui/material/TextField';
 import Autocomplete from '@mui/material/Autocomplete';
 
-export default function ComboBox() {
+export default function OriginBox({ id }) {
   return (
     <Autocomplete
       disablePortal
-      id="combo-box-demo"
+      id={id}
       options={Cities}
       sx={{ width: 300 }}
       renderInput={(params) => <TextField {...params} label="Origin" />}
