@@ -7,7 +7,7 @@ export default function OriginBox({ id }) {
       disablePortal
       id={id}
       options={Cities}
-      sx={{ width: 300 }}
+      // sx={{ width: 300 }}
       renderInput={(params) => <TextField {...params} label="Origin" />}
     />
   );

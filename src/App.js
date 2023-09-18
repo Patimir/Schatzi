@@ -1,3 +1,4 @@
+import { Button } from '@mui/material';
 import './App.css';
 import BasicDatePicker from './components/BasicDatePicker';
 import OriginBox from './components/OriginBox';
@@ -8,22 +9,29 @@ function App() {
   return (
     <div className="App">
       <Container maxWidth="sm">
-        <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
-          <Grid item xs={6}>
+        <Grid container spacing={1}>
+          <Grid item xs={3}>
             <OriginBox id="origin1" />
           </Grid>
-          <Grid item xs={6}>
+          <Grid item xs={9}>
           </Grid>
-          <Grid item xs={6}>
+          <Grid item xs={3}>
             <OriginBox id="origin2" />
           </Grid>
-          <Grid item xs={6}>
+          <Grid item xs={3}>
             <BasicDatePicker label="Depart" />
           </Grid>
+          <Grid item xs={3}>
+            <BasicDatePicker label="Return" />
+          </Grid>
+          <Grid item xs={3}>
+            <Button variant="contained">Search</Button>
+          </Grid>
+          <Grid item xs={3}>
+            <Button variant="contained">Add Origin</Button>
+          </Grid>
         </Grid>
-
       </Container>
-
     </div>
   );
 }
